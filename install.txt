@@ -1,0 +1,4 @@
+git init
+npm init
+node hello-npm.js
+npx nodemon hello-npm.js
