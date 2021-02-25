@@ -20,6 +20,12 @@ function recursiveGame () {
         else if (answer === 's') {
             // Вывод статистики
             statistic();
+            
+            // console.log (statistic());
+            
+            // Не совсем понимаю почему, если я в модуле statistic делаю return obj,
+            // то тут при вызове метода statistic я получаю undefined(
+            // возможно всё дело в промисах, но я пока не разобрался
 
             rl.close();
         } else if (+answer >= 0 && +answer <= 1) {

@@ -57,6 +57,8 @@ function statistic () {
 
                     // Выводим статистику
                     console.log(obj);
+                    
+                    // return obj;
                 })
                 .catch((err) => {
                     console.log('error:', err);
