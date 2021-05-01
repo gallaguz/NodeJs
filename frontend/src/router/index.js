@@ -1,29 +1,35 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const Home = () => import(/* webpackChunkName: "Home" */ '../views/Home.vue');
-const About = () => import(/* webpackChunkName: "About" */ '../views/About.vue');
-const News = () => import(/* webpackChunkName: "News" */ '../views/News.vue');
+const home = () => import(/* webpackChunkName: "home" */ '../views/home.vue');
+const about = () => import(/* webpackChunkName: "about" */ '../views/about.vue');
+const news = () => import(/* webpackChunkName: "news" */ '../views/news.vue');
+const toDo = () => import(/* webpackChunkName: "toDo" */ '../views/to-do.vue');
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'home',
+    component: home
   },
   {
     path: '/about',
-    name: 'About',
-    component: About
+    name: 'about',
+    component: about
   },
   {
     path: '/news',
-    name: 'News',
-    component: News
+    name: 'news',
+    component: news
+  },
+  {
+    path: '/todo',
+    name: 'too-do',
+    component: toDo
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL || '/'),
   routes
 })
 

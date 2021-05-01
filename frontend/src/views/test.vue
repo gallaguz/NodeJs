@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: "News",
+  name: "news",
   data() {
     return {
       categories: [],
@@ -39,7 +39,7 @@ export default {
       this.newsList.push('lol');
       console.log(el)
 
-      fetch('http://localhost:3000/api/news', {
+      fetch('http://localhost:3001/api/news', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -53,7 +53,8 @@ export default {
           });
     },
     getCategories() {
-      fetch('http://localhost:3000/api/categories')
+      console.log('getCategories')
+      fetch('http://localhost:3001/api/categories')
           .then(response => response.json())
           .then((res) => {
             this.categories = res;

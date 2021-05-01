@@ -7,7 +7,7 @@ import { requestTime, logger } from './middlewares.js'
 
 const __dirname = path.resolve();
 const app = express();
-const PORT = process.env.PORT ?? 3000;
+const PORT = process.env.PORT || 3001;
 
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, 'src/ejs'));
@@ -21,10 +21,6 @@ app.use(logger)
 
 app.use(routes);
 
-app.get('/', (req, res) => {
-    res.render('index', {title: 'Main Page', active: 'main'})
-})
-
 app.listen(PORT, () => {
-    console.log(`http://localhost:${PORT}`)
+    console.log(`Running at: http://localhost:${PORT}`)
 });
