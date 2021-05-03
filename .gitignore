@@ -3,3 +3,5 @@
 test
 ./test
 node_modules
+/docker/mysql/mysql_db_files/
+/docker/postgres/postgres_db_files/

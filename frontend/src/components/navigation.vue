@@ -13,13 +13,11 @@ export default {
 }
 </script>
 
-<style scoped>
-  #nav {
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-  }
-  #nav a {
-    margin: 5px;
-  }
+<style lang="sass">
+  #nav
+    padding: 30px
+    display: flex
+    justify-content: center
+    a
+      margin: 5px
 </style>
