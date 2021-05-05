@@ -3,6 +3,7 @@ services:
   mysql:
     image: mysql:5.7
     restart: always
+    container_name: mysql
     environment:
       MYSQL_DATABASE: 'db'
       MYSQL_USER: 'user'
@@ -35,14 +36,18 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
+    container_name: pma
     links:
-      - mysql:mysql
+      - mysql
     ports:
       - "8082:80"
     environment:
+      PMA_HOST: mysql
       PMA_USER: 'user'
       PMA_PASSWORD: 'password'
       PHP_UPLOAD_MAX_FILESIZE: '100MB'
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
 
 volumes:
   mysql_db_files:
