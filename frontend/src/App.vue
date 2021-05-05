@@ -4,14 +4,14 @@
 </template>
 
 <script>
-import Navigation from './components/navigation'
+import Navigation from './components/navigation';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    Navigation
-  }
-}
+    Navigation,
+  },
+};
 </script>
 
 <style>
@@ -22,8 +22,6 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
-
 
 #nav a {
   font-weight: bold;
